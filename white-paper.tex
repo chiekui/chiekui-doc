@@ -1,4 +1,5 @@
-\documentclass[a4j]{jarticle}
+\documentclass[10pt,a4paper]{jarticle}
+\usepackage[top=30truemm,bottom=30truemm,left=20truemm,right=20truemm]{geometry}
 \usepackage{amsmath}
 \usepackage[]{multicol}
 \title{智慧喰 白書(draft)}
@@ -27,10 +28,28 @@
 \subsection{智慧喰い}
 ここで私の提案するシステム、”智慧喰”について説明する。
 \subsubsection{定義}
+以下の条件を満たすものを{\bf 智慧喰システム}と定義する。
+\begin{enumerate}
+  \item Commandを受け取り、システムの情報を変更する事ができる。
+  \item Queryを受け取り、システムの状態を返す事ができる。
+  \item 後述するデータモデルを持つ。
+  \item システムを構成するPeerを任意に増減することができる。
+\end{enumerate}
+以下の条件を満たすものを{\bf 智慧喰システムの完全Peer}と定義する。
+\begin{enumerate}
+  \item 以下のEndpointを持ち、Peer間、Client-Peer間で通信を行う事ができる。
+    \begin{itemize}
+      \item API: Command/Query用Endpoint
+      \item Consensus: 合意形成用Endpoint
+      \item Internal: 内部通信用Endpoint
+      \item Supervise: 監視用Endpoint
+    \end{itemize}
+  \item 指定された形式でデータを保存することができる
+  \item 合意形成に参加し、データの整合性を確認することができる
+\end{enumerate}
+上記の条件から3項を抜いたものを {\bf 智慧喰システムの準Peer}と定義する。
 
-これからうめるよ〜
-
-\subsubsection{構成機能}
+\subsubsection{構成要素}
 これからうめるよ〜
 
 \subsubsection{プロトコル}
