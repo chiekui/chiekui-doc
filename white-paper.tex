@@ -22,11 +22,12 @@
   \item 情報を食べるものとして異なる台帳が集い、巨大な1つの台帳と成り、利用者は情報の位置を知らなくとも参照、変更可能なシステムを築く事を目的とする。
 \end{itemize}
 
-\subsubsection{なせ作るか？}
+\subsection{なせ作るか？}
+人類が作ってきたインターネットを、一歩先に更新したい。
 
 \section{智慧喰い}
 ここで私の提案するシステム、”智慧喰”について説明する。
-\subsubsection{定義}
+\subsection{定義}
 以下の条件を満たすものを{\bf 智慧喰システム}と定義する。
 \begin{enumerate}
   \item Commandを受け取り、システムの情報を変更する事ができる。
@@ -48,7 +49,7 @@
 \end{enumerate}
 上記の条件から3項を抜いたものを {\bf 智慧喰システムの準Peer}と定義する。
 
-\subsubsection{構成要素}
+\subsection{構成要素}
 智慧喰システムの完全Peerは以下の装置によって構成されている。なお存在理由を右に記述する。
 \begin{enumerate}
   \item Command/Queryを受け取り、受け取った事実をトリガーとして任意のイベントを発生させる装置。受け取った事実を記録するため
@@ -66,8 +67,9 @@
   \item Peerの管理を行い、システム全体の安定を図る。システムを停止させず、拡張や入れ替えを容易に行うため  
 \end{enumerate}
 
-\subsubsection{プロトコル}
+\subsection{プロトコル}
 智慧喰は以下のプロトコル階層を持つ
+※画像に変える
 \begin{enumerate}
   \item Application Layer
   \item Entity Layer
@@ -75,13 +77,32 @@
   \item Ledger Layer
 \end{enumerate}
 
+\subsubsection{Application Layer}
+HTTPだとかGRPCだとかなんか色々俗っぽいやつ
+
+\subsubsection{Entity Layer}
+どのDomainに属していてどのAccountが主体的でどのAssetに対してどんなCommandをするのか的な\\
+でかいかな？Domain Layer提唱？
+
+
+\subsubsection{Chain Layer}
+どのChain内で保存しているか的な\\ 
+これホンマにいる？
+
+\subsubsection{Ledger Layer}
+どのPeerが受け取っただとか、どのPeerに投げ込んだらいいのかとかとか
+
 \subsection{特徴的な機能}
 
 \subsubsection{三権分立的権限管理}
-これからうめるよ〜
+司法、立法、行政的分権システム。
+ルールを制定する者はルールを実行する者ではない\\
+ルールを実行する者はルールに則らなければならない\\
+ルールに矛盾が発生することは許されない\\
 
 \subsubsection{移管}
-これからうめるよ〜
+管理を信頼のおけるシステムに任せる事ができる。
+これは低Layerのお話
 
 \subsection{仕組み}
 
